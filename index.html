@@ -1,0 +1,107 @@
+<!doctype html>
+<html lang="th">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Tracer Garage UI</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <main class="scene">
+      <section class="panel inventory-panel glass">
+        <header class="panel-header">
+          <div>
+            <p class="tag">• GARAGE</p>
+            <h1>TRACER<span>replay</span></h1>
+          </div>
+          <button class="close">CLOSE ✕</button>
+        </header>
+
+        <div class="toolbar">
+          <div class="tabs">
+            <button class="tab active">👤</button>
+            <button class="tab">📦</button>
+          </div>
+          <label class="search">
+            <span>🔎</span>
+            <input type="text" placeholder="Search car..." />
+          </label>
+          <div class="filters">
+            <button class="pill active">Ausgeparkt</button>
+            <button class="pill">Geparkt</button>
+            <button class="pill">☆</button>
+          </div>
+        </div>
+
+        <div class="car-grid">
+          <article class="car-card selected">
+            <p class="class">Super Sport</p>
+            <h3>AUDI RS6 ABT</h3>
+            <div class="car-image"></div>
+            <button>select car</button>
+          </article>
+          <article class="car-card"><p class="class">Super Sport</p><h3>AUDI RS6 ABT</h3><div class="car-image"></div><button>select car</button></article>
+          <article class="car-card"><p class="class">Super Sport</p><h3>AUDI RS6 ABT</h3><div class="car-image"></div><button>select car</button></article>
+          <article class="car-card"><p class="class">Super Sport</p><h3>AUDI RS6 ABT</h3><div class="car-image"></div><button>select car</button></article>
+          <article class="car-card"><p class="class">Super Sport</p><h3>AUDI RS6 ABT</h3><div class="car-image"></div><button>select car</button></article>
+          <article class="car-card"><p class="class">Super Sport</p><h3>AUDI RS6 ABT</h3><div class="car-image"></div><button>select car</button></article>
+          <article class="car-card"><p class="class">Super Sport</p><h3>AUDI RS6 ABT</h3><div class="car-image"></div><button>select car</button></article>
+          <article class="car-card"><p class="class">Super Sport</p><h3>AUDI RS6 ABT</h3><div class="car-image"></div><button>select car</button></article>
+          <article class="car-card"><p class="class">Super Sport</p><h3>AUDI RS6 ABT</h3><div class="car-image"></div><button>select car</button></article>
+          <article class="car-card"><p class="class">Super Sport</p><h3>AUDI RS6 ABT</h3><div class="car-image"></div><button>select car</button></article>
+          <article class="car-card"><p class="class">Super Sport</p><h3>AUDI RS6 ABT</h3><div class="car-image"></div><button>select car</button></article>
+          <article class="car-card"><p class="class">Super Sport</p><h3>AUDI RS6 ABT</h3><div class="car-image"></div><button>select car</button></article>
+        </div>
+      </section>
+
+      <aside class="panel detail-panel glass">
+        <p class="tag">• Selected Car</p>
+        <h2>Audi RS6 Abt</h2>
+        <div class="hero-car"></div>
+
+        <div class="plate">J1281G1</div>
+
+        <div class="meta-row">
+          <span class="owner">Felix Hafner</span>
+          <button class="ghost">Share Car</button>
+          <span class="id">Player ID</span>
+        </div>
+
+        <div class="status-list">
+          <div class="status-item">
+            <div>
+              <h4>Fuelstatus</h4>
+              <p>Some short information</p>
+            </div>
+            <div class="meter"><span style="width: 72%"></span></div>
+            <strong>150L</strong>
+          </div>
+
+          <div class="status-item">
+            <div>
+              <h4>Trunkspace</h4>
+              <p>Some short information</p>
+            </div>
+            <div class="meter"><span style="width: 15%"></span></div>
+            <strong>150/1050</strong>
+          </div>
+
+          <div class="status-item">
+            <div>
+              <h4>Enginestatus</h4>
+              <p>Some short information</p>
+            </div>
+            <div class="meter"><span style="width: 64%"></span></div>
+            <strong>64%</strong>
+          </div>
+        </div>
+
+        <div class="actions">
+          <button>Repair Car</button>
+          <button>Fuel Car</button>
+          <button class="primary">Drive Car</button>
+        </div>
+      </aside>
+    </main>
+  </body>
+</html>

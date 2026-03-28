@@ -1,0 +1,318 @@
+:root {
+  --bg: #060b17;
+  --panel: rgba(10, 18, 34, 0.72);
+  --card: rgba(13, 24, 43, 0.72);
+  --line: rgba(127, 170, 239, 0.2);
+  --text: #eaf2ff;
+  --muted: #8ca6ca;
+  --cyan: #43dbff;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  color: var(--text);
+  min-height: 100vh;
+  background:
+    radial-gradient(circle at 15% 20%, rgba(46, 170, 255, 0.26), transparent 32%),
+    radial-gradient(circle at 80% 10%, rgba(16, 224, 255, 0.16), transparent 30%),
+    linear-gradient(160deg, #0b1324 0%, #04070f 75%);
+}
+
+.scene {
+  width: min(1400px, 95vw);
+  margin: 24px auto;
+  display: grid;
+  gap: 16px;
+  grid-template-columns: 1.8fr 0.9fr;
+}
+
+.glass {
+  border: 1px solid var(--line);
+  border-radius: 16px;
+  background: linear-gradient(180deg, rgba(14, 27, 49, 0.78), rgba(7, 13, 27, 0.82));
+  box-shadow: 0 20px 45px rgba(0, 0, 0, 0.55), inset 0 1px 0 rgba(255, 255, 255, 0.08);
+  backdrop-filter: blur(4px);
+}
+
+.panel {
+  padding: 18px;
+}
+
+.panel-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 14px;
+}
+
+h1,
+h2,
+h3,
+h4,
+p {
+  margin: 0;
+}
+
+h1 {
+  letter-spacing: 0.04em;
+  font-size: 34px;
+}
+
+h1 span {
+  color: #8ca2c9;
+  font-weight: 300;
+}
+
+.tag {
+  color: #4fcbff;
+  font-size: 12px;
+  margin-bottom: 4px;
+}
+
+.close {
+  background: rgba(236, 80, 103, 0.18);
+  border: 1px solid rgba(255, 112, 138, 0.4);
+  color: #ff94aa;
+  border-radius: 9px;
+  padding: 8px 12px;
+  cursor: pointer;
+}
+
+.toolbar {
+  display: grid;
+  grid-template-columns: auto minmax(220px, 1fr) auto;
+  gap: 10px;
+  margin-bottom: 14px;
+}
+
+.tabs,
+.filters {
+  display: flex;
+  gap: 8px;
+}
+
+.tab,
+.pill,
+.car-card button,
+.ghost,
+.actions button {
+  border: 1px solid rgba(132, 171, 233, 0.26);
+  background: rgba(14, 25, 44, 0.85);
+  color: var(--muted);
+  border-radius: 8px;
+  padding: 8px 10px;
+  cursor: pointer;
+}
+
+.tab.active,
+.pill.active,
+.car-card.selected button {
+  color: #001827;
+  border-color: rgba(67, 219, 255, 0.65);
+  background: linear-gradient(90deg, #56edff, #5aa9ff);
+  font-weight: 600;
+}
+
+.search {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  border: 1px solid rgba(132, 171, 233, 0.24);
+  background: rgba(10, 18, 31, 0.8);
+  border-radius: 8px;
+  padding: 0 10px;
+}
+
+.search input {
+  width: 100%;
+  height: 38px;
+  border: none;
+  background: transparent;
+  color: var(--text);
+  outline: none;
+}
+
+.car-grid {
+  display: grid;
+  grid-template-columns: repeat(4, minmax(130px, 1fr));
+  gap: 10px;
+}
+
+.car-card {
+  border: 1px solid rgba(122, 162, 221, 0.15);
+  border-radius: 10px;
+  background: linear-gradient(180deg, rgba(15, 26, 46, 0.9), rgba(8, 15, 29, 0.92));
+  padding: 8px;
+}
+
+.class {
+  color: #5ee7ff;
+  font-size: 11px;
+}
+
+.car-card h3 {
+  font-size: 18px;
+  line-height: 1.1;
+  margin-bottom: 7px;
+}
+
+.car-image,
+.hero-car {
+  border-radius: 10px;
+  background: radial-gradient(circle at 65% 35%, #ffffff 0, #dce4f4 36%, #7c889f 52%, #2d3546 80%);
+  position: relative;
+}
+
+.car-image {
+  height: 74px;
+  margin-bottom: 8px;
+}
+
+.hero-car {
+  height: 140px;
+  margin: 8px 0 12px;
+}
+
+.car-image::after,
+.hero-car::after {
+  content: "";
+  position: absolute;
+  inset: 24% 10%;
+  border-radius: 60% 40% 40% 55%;
+  background: linear-gradient(180deg, #fdfdfd 0%, #d7dfea 80%);
+  box-shadow: 0 12px 16px rgba(0, 0, 0, 0.35);
+}
+
+.car-card button {
+  width: 100%;
+  font-size: 12px;
+}
+
+.detail-panel h2 {
+  font-size: 42px;
+  text-transform: uppercase;
+  letter-spacing: 0.02em;
+  margin-bottom: 8px;
+}
+
+.plate {
+  width: fit-content;
+  padding: 8px 16px;
+  border-radius: 7px;
+  background: #f4f8ff;
+  color: #0b1020;
+  font-weight: 700;
+  margin: 0 auto 14px;
+}
+
+.meta-row {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin-bottom: 12px;
+}
+
+.owner {
+  color: #ff5c88;
+  font-size: 13px;
+}
+
+.ghost {
+  flex: 1;
+}
+
+.id {
+  font-size: 12px;
+  color: #61779c;
+}
+
+.status-list {
+  display: grid;
+  gap: 10px;
+  margin-bottom: 14px;
+}
+
+.status-item {
+  border: 1px solid rgba(124, 168, 233, 0.2);
+  border-radius: 10px;
+  background: rgba(8, 16, 30, 0.8);
+  padding: 8px;
+  display: grid;
+  grid-template-columns: 1fr 120px auto;
+  align-items: center;
+  gap: 8px;
+}
+
+.status-item h4 {
+  font-size: 15px;
+}
+
+.status-item p {
+  color: #6f88ac;
+  font-size: 12px;
+}
+
+.meter {
+  height: 8px;
+  border-radius: 99px;
+  background: #111e34;
+  overflow: hidden;
+}
+
+.meter span {
+  display: block;
+  height: 100%;
+  border-radius: inherit;
+  background: linear-gradient(90deg, #7dff98, #36be88);
+}
+
+.status-item strong {
+  color: #76e8ff;
+  font-size: 13px;
+}
+
+.actions {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 8px;
+}
+
+.actions .primary {
+  grid-column: span 2;
+  color: #001827;
+  border-color: rgba(67, 219, 255, 0.65);
+  background: linear-gradient(90deg, #56edff, #5aa9ff);
+}
+
+@media (max-width: 1150px) {
+  .scene {
+    grid-template-columns: 1fr;
+  }
+
+  .car-grid {
+    grid-template-columns: repeat(3, minmax(130px, 1fr));
+  }
+}
+
+@media (max-width: 760px) {
+  .toolbar {
+    grid-template-columns: 1fr;
+  }
+
+  .car-grid {
+    grid-template-columns: repeat(2, minmax(120px, 1fr));
+  }
+
+  .detail-panel h2 {
+    font-size: 32px;
+  }
+
+  .status-item {
+    grid-template-columns: 1fr;
+  }
+}
